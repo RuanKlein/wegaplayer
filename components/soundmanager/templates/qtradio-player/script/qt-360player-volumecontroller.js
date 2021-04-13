@@ -1903,6 +1903,9 @@ soundManager.onready(threeSixtyPlayer.init);
 					method: 'GET',
 					dataType: 'json',
 					crossDomain: true,
+					headers: {
+						'Access-Control-Allow-Origin':'*'
+					},
 					success: function(result) {
 						qtFeedPlayerTrack.html(result.title);
 						qtFeedPlayerAuthor.html(result.artist);
