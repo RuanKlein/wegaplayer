@@ -1902,6 +1902,7 @@ soundManager.onready(threeSixtyPlayer.init);
 					url: 'https://zenoplay.zenomedia.com/api/zenofm/nowplaying/r3yytt1kfg8uv',
 					method: 'GET',
 					dataType: 'json',
+					crossDomain: true,
 					success: function(result) {
 						qtFeedPlayerTrack.html(result.title);
 						qtFeedPlayerAuthor.html(result.artist);
