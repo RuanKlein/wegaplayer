@@ -1899,13 +1899,9 @@ soundManager.onready(threeSixtyPlayer.init);
 
 			function fetchZenoData() {
 				$.ajax({
-					url: 'https://zenoplay.zenomedia.com/api/zenofm/nowplaying/r3yytt1kfg8uv',
+					url: 'https://cors-anywhere.herokuapp.com/http://zenoplay.zenomedia.com/api/zenofm/nowplaying/r3yytt1kfg8uv',
 					method: 'GET',
 					dataType: 'json',
-					crossDomain: true,
-					headers: {
-						'Access-Control-Allow-Origin':'*'
-					},
 					success: function(result) {
 						qtFeedPlayerTrack.html(result.title);
 						qtFeedPlayerAuthor.html(result.artist);
